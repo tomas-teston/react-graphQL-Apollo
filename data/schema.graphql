@@ -16,6 +16,7 @@ type Email {
     email: String
 }
 type Query {
+    getClientes: [Cliente]
     getCliente(id: ID): Cliente
 }
 """ Asigna la categoría del cliente """

@@ -3,6 +3,9 @@ import { Clientes } from './db';
 
 export const resolvers = {
     Query: {
+        getClientes: () => {
+            return Clientes.find({});
+        },
         getCliente: ({id}) => {
             return new Cliente(id, clientesDB[id]);
         }
