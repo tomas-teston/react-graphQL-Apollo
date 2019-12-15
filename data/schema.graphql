@@ -47,4 +47,5 @@ type Mutation {
     """ Permite crear nuevos clientes """
     crearCliente(input: ClienteInput) : Cliente
     actualizarCliente(input: ClienteInput) : Cliente
+    eliminarCliente(id: ID!): String
 }
