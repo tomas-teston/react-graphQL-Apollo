@@ -3,8 +3,8 @@ import { Clientes } from './db';
 
 export const resolvers = {
     Query: {
-        getClientes: () => {
-            return Clientes.find({});
+        getClientes: (root, {limite}) => {
+            return Clientes.find({}).limit(limite);
         },
         getCliente: ({id}) => {
             return new Cliente(id, clientesDB[id]);
