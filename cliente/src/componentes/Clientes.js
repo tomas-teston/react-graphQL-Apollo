@@ -2,7 +2,7 @@ import React from 'react'
 import { Query } from 'react-apollo';
 import { CLIENTES_QUERY } from '../queries';
 
-const Clientes = () => (
+export const Clientes = () => (
     <Query query={CLIENTES_QUERY} >
         {({ loading, error, data }) => {
             if (loading) return "Cargando...";
@@ -34,5 +34,3 @@ const Clientes = () => (
         }}
     </Query>
 )
-
-export default Clientes;
